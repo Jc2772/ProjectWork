@@ -1,6 +1,6 @@
 package package1;
 
-public class Main {
+/*public class Main {
 
     public static void main(String[] args) {
         // TODO code application logic here
@@ -9,4 +9,4 @@ public class Main {
         fun.haveFun();
         System.out.println("Finishing main "+n);
     }
-}
+}*/
