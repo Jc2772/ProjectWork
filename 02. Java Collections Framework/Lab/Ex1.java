@@ -12,22 +12,23 @@ public class Ex1 {
         ex1.addItem("May");
         ex1.addItem("Fay");
 
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+        ListIterator Itter = list.listIterator(list.size());
+        while (Itter.hasNext()) {
+            System.out.println(Itter.next());
         }
         System.out.println("----------------------------------------------------------------");
         ex1.addAt("Ray",3);
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+        while (Itter.hasNext()) {
+            System.out.println(Itter.next());
         }
         ex1.removeItem("Kay");
         System.out.println("----------------------------------------------------------------");
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+        while (Itter.hasNext()) {
+            System.out.println(Itter.next());
         }
         System.out.println("----------------------------------------------------------------");
-        for (int i = list.size(); i > 0; i--) {
-            System.out.println(list.get(i-1));
+        while (Itter.hasPrevious()) {
+            System.out.println(Itter.previous());
         }
         ex1.addItem("Kay");
         System.out.println("----------------------------------------------------------------");
@@ -41,12 +42,14 @@ public class Ex1 {
             hashSet.add(list.get(i));
             treeSet.add(list.get(i));
         }
-        for (int i = 0; i < hashSet.size(); i++) {
-            System.out.println(hashSet.toArray()[i]);
+        Iterator itr1 = hashSet.iterator();
+        while(itr1.hasNext()) {
+            System.out.println(itr1.next());
         }
         System.out.println("TreeSet----------------------------------------------------------");
-        for (int i = 0; i < treeSet.size(); i++) {
-            System.out.println(treeSet.toArray()[i]);
+        Iterator itr2 = treeSet.iterator();
+        while (itr2.hasNext()){
+            System.out.println(itr2.next());
         }
     }
 }
