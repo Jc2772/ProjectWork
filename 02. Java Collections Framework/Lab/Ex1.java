@@ -12,7 +12,7 @@ public class Ex1 {
         ex1.addItem("May");
         ex1.addItem("Fay");
 
-        ListIterator Itter = list.listIterator(list.size());
+        ListIterator<String> Itter = list.listIterator(list.size());
         while (Itter.hasNext()) {
             System.out.println(Itter.next());
         }
@@ -32,24 +32,22 @@ public class Ex1 {
         }
         ex1.addItem("Kay");
         System.out.println("----------------------------------------------------------------");
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+        while (Itter.hasNext()) {
+            System.out.println(Itter.next());
         }
         System.out.println("HashSet---------------------------------------------------------");
         HashSet<String> hashSet = new HashSet<String>();
         TreeSet<String> treeSet = new TreeSet<String>();
-        for (int i = 0; i < list.size(); i++) {
-            hashSet.add(list.get(i));
-            treeSet.add(list.get(i));
+        for (String string : list) {
+            hashSet.add(string);
+            treeSet.add(string);
         }
-        Iterator itr1 = hashSet.iterator();
-        while(itr1.hasNext()) {
-            System.out.println(itr1.next());
+        for (String s : hashSet) {
+            System.out.println(s);
         }
         System.out.println("TreeSet----------------------------------------------------------");
-        Iterator itr2 = treeSet.iterator();
-        while (itr2.hasNext()){
-            System.out.println(itr2.next());
+        for (String s : treeSet) {
+            System.out.println(s);
         }
     }
 }
